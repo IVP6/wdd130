@@ -22,7 +22,8 @@ p {
     padding: 0px;
 }
 aside {
-    width: 20rem;
+    width: 200px;
+    height: auto;
     border: 1px solid rgb(0, 0, 0 / 0.2); 
     padding: 1px;
     margin: 1rem;
@@ -35,4 +36,14 @@ footer {
     text-align: center;
     font-size: medium;
     color: darkcyan;
+}
+nav{
+    background-color: #03364e;
+    padding: 1rem;
+}
+nav a{
+    color: #333;
+    padding: 0.5rem 1rem;
+    display: block;
+    color: white;
 }
