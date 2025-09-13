@@ -37,7 +37,10 @@ footer {
     font-size: medium;
     color: darkcyan;
 }
-
+nav {
+  background-color: #03364e;
+  padding: 1rem;
+}
 nav a{
     color: #333;
     padding: 0.5rem 1rem;
