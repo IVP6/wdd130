@@ -14,10 +14,7 @@ main img {
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
-.image-auto-size{
-    width: 200px;
-    height: auto;
-}
+
 p {
     padding: 0px;
 }
@@ -29,6 +26,9 @@ aside {
     margin: 1px;
     background-color: lightgray;
     text-align: center;
+}
+aside img{width: 200px;
+    height: auto;
 }
 footer {
     margin-top: 15px;
