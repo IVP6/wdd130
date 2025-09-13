@@ -1,0 +1,38 @@
+.header, .footer{
+    padding: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+    background-color: rgba(26, 25, 25, 0.892);
+}
+img{
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    background-color: darkslategray;
+    box-shadow: 0 0 30px rgb(29, 48, 48);
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+.temple-info{
+    background-color: rgba(198, 196, 196, 0.865);
+    color: black;
+    padding: 10px;
+    margin: 20px;
+}
+.text-align{
+    text-align: left;
+    margin-left: 0px;
+}
+.underline{
+    text-decoration: underline;
+}
+.hr {
+    border: 0.5px solid #060505;
+    margin: 0px 0;
+}
