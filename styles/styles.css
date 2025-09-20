@@ -23,13 +23,20 @@ p {
     padding: 0px;
 }
 aside {
-    width: 200px;
+    width: 400px;
     height: auto;
     border: 1px solid rgb(0, 0, 0 / 0.2); 
     padding: 5px;
     margin: 1px;
-    background-color: lightgray;
+    background-color: darkgray;
     text-align: center;
+    position: relative;
+}
+aside h2{
+    position: absolute;
+    top: 80px;
+    left: 155px;
+    color: rgb(240, 5, 5);
 }
 aside img{width: 200px;
     height: auto;
@@ -42,8 +49,11 @@ footer {
     color: darkcyan;
 }
 nav {
-  background-color: #03364e;
+  background-color: #277f99;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+    align-items: center;
 }
 nav a{
     color: #333;
@@ -54,9 +64,13 @@ nav a{
 /* Class Selectors */
 
 .box {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-    background-color: lightgray;
-    color: darkkhaki;
+    border: 2px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: darkgray;
+    color: white;
+}
+.icon {
+    width: 8rem;
+    height: auto;
 }
