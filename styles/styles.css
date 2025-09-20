@@ -1,5 +1,9 @@
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 main{
     max-width: 840px;
 }
@@ -46,4 +50,13 @@ nav a{
     padding: 0.5rem 1rem;
     display: block;
     color: white;
+}
+/* Class Selectors */
+
+.box {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgray;
+    color: darkkhaki;
 }
