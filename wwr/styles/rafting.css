@@ -31,8 +31,15 @@ h1, h2 {
 }
 nav, p, section, article {
     margin: 16px;
-    padding: 8px;
+    padding: 2px;
     text-align: center;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;  /* Add this line for spacing between items */
 }
 .socialmedia a {
     text-decoration: none;
@@ -45,6 +52,49 @@ nav, p, section, article {
     width: 100%;
     height: auto;
 }
+header {
+    width: 840px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+header img {
+    width: 80px;
+    height: auto;
+}
+/* ...existing code... */
+
+footer {
+    width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;  /* Align text to the left */
+}
+
+.socialmedia {
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* ...existing code... */
 h1 {
     position:absolute;
     top: 20px;
@@ -56,7 +106,7 @@ h1 {
 }
 article {
     position:absolute;
-    bottom: 20px;
+    bottom: 100px;
     background-color: var(--text-background);
     color: var(--font-color-light);
 
@@ -66,4 +116,30 @@ article {
     width: 125px;
     border: 0px;
     margin-left: 16px;
+}
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.adventure-grid figure {
+    text-align: center;
+    margin: 0;
+}
+
+.adventure-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.adventure-grid figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--font-color-dark);
 }
