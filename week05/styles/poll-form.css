@@ -1,0 +1,121 @@
+
+/* Root styles */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #ff9704;
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+    --box-color: #082481;
+    --text-color: #2dccde;
+    --background-color: #b3dbfe;
+    --box-shadow: 13px 12px 6px -1px rgba(0, 0, 0, 0.29);
+    --input-text-color: black;
+    --input-text-color-secondary: darkgray;
+}
+
+/* Universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Merriweather, Georgia, serif;
+    font-size: 1.2em;
+    background-color: var(--background-color);
+}
+label, input, button, select, textarea {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    margin: 0.4rem 0;
+    color: var(--text-color);
+}
+select {
+    color: var(--input-text-color);/*option select text color*/
+}
+option {
+    color: black;
+}
+input {
+    color: var(--input-text-color);
+}
+textarea{
+    color: var(--input-text-color)
+}
+label {
+    text-align: left;
+    padding-right: 1rem;
+}
+input, select, textarea {
+    padding: 0;
+    font-size: 1.1rem;
+}
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+}
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    border-radius: 1.5rem;
+}
+button:hover {
+    background-color: var(--primary-color);
+}
+/* Form container styles */
+form {
+    width: 520px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--box-color);
+    box-shadow: var(--box-shadow);
+}
+.form-item {
+    display: grid;
+    align-items: center;
+}
+.column1 {
+    grid-template-columns: 3fr 1fr;
+    margin: 0.2rem;
+}
+.column2 {
+    grid-template-columns: 1fr 2fr;
+}
+/* header, footer styles*/
+header, footer {
+    max-width: 520px;
+    margin: auto;
+    background-color: var(--box-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: var(--box-shadow);
+}
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+h1 {
+    margin: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+/* Fieldset styles */
+fieldset {
+    display: grid;
+    grid-gap: 0rem;
+}
+legend{
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.3rem;
+}
