@@ -5,45 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML | CSS Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
 </head>
-<header></header>
-<h1>HTML | CSS Quiz</h1>
-</header>
+
 
 <body>
-    <form>
-        <fieldset>
-            <legend>HTML & CSS Quiz</legend>
-            <div>
-                <LABEl for="q1">What does HTML stand for?</LABEl>
-                <input type="text" id="q1" name="q1">
-            </div>
-            <div>
-                <label for="q2">What does CSS stand for?</label>
-                <label>A. <input type="radio" name="q2" value="cascading style sheets"> Cascading Style
-                    Sheets</label>
-                <label>B. <input type="radio" name="q2" value="computer style sheets"> Computer Style
-                    Sheets</label>
-                <label>C. <input type="radio" name="q2" value="colorful style sheets"> Colorful Style
-                    Sheets</label>
-            </div>
-            <div>
-                <label for="q3">What is the syntax to link your CSS file in HTML?</label>
-                <select name="q3" id="q3">
-                    <option value="">--Select One--</option>
-                    <option value='<link rel="stylesheet" href="styles.css">'>&lt;link rel="stylesheet"
-                        href="styles.css"&gt;</option>
-                    <option value='<a href="styles.css">'>&lt;a href="styles.css"&gt;</option>
-                    <option value='<css link="styles.css">'>&lt;css link="styles.css"&gt;</option>
-                </select>
-            </div>
-            <label for="q4">Ivan is writing a html quiz, he notices that his q4 is not showing up. What could be the
-                issue?</label>
-            <img src="images/Capture.PNG" alt="html code snippet showing q4 textarea not displaying">
-            <textarea id="q4" name="q4" rows="4" placeholder="Enter your answer here..."></textarea>
-        </fieldset>
-    </form>
+    <header>
+        <h1>HTML | CSS Quiz</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>HTML & CSS Quiz</legend>
+                <div class="box">
+                    <label for="q1">1. What does HTML stand for?</label>
+                    <input type="text" id="q1" name="q1">
+                </div>
+                <div class="question-container box">
+                    <label for="q2">2. What does CSS stand for?</label>
+                    <label class="radio-option">A. <input type="radio" name="q2" value="cascading style sheets">
+                        Cascading Style
+                        Sheets</label>
+                    <label class="radio-option">B. <input type="radio" name="q2" value="computer style sheets"> Computer
+                        Style
+                        Sheets</label>
+                    <label class="radio-option">C. <input type="radio" name="q2" value="colorful style sheets"> Colorful
+                        Style
+                        Sheets</label>
+                </div>
+                <div class="box">
+                    <label for="q3">3. What is the syntax to link your CSS file in HTML?</label>
+                    <select name="q3" id="q3">
+                        <option value="">--Select One--</option>
+                        <option value='<link rel="stylesheet" href="styles.css">'>&lt;link rel="stylesheet"
+                            href="styles.css"&gt;</option>
+                        <option value='<a href="styles.css">'>&lt;a href="styles.css"&gt;</option>
+                        <option value='<css link="styles.css">'>&lt;css link="styles.css"&gt;</option>
+                    </select>
+                </div>
+                <div class=" question-container box">
+                    <label for="q4">4. Ivan is writing a html quiz, he notices that his q4 is not showing up. What could
+                        be
+                        the
+                        issue?</label>
+                    <img src="images/Capture.PNG" alt="html code snippet showing q4 textarea not displaying">
+                    <textarea id="q4" name="q4" rows="4" placeholder="Enter your answer here..."></textarea>
+                </div>
+                <div class="box">
+                    <label for="q5">5. How many heading levels (h1,h2,...) are available in HTML?</label>
+                    <input type="number" id="q5" name="q5" min="1" max="10"
+                        placeholder="Enter a number between 1 and 10">
+                </div>
+
+            </fieldset>
+            <button type="submit">Submit Quiz</button>
+        </form>
     </main>
+    <footer>
+        <p>&copy; 2024 HTML | CSS Quiz</p>
+    </footer>
 </body>
+
 
 </html>
