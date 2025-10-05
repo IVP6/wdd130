@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact us for more information">
+    <title>Rapids U | Contact Us</title>
+    <link rel="stylesheet" href="styles/contact-us.css">
+</head>
+
+<body>
+    <header>
+        <img class="header-img" src="images/z-raftingcompas.jpg" alt="Rafting Compass">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Rapids University</h1>
+        <div class="company-info">
+            <p> 123 Main River St. <br>
+                Anytown, USA 12345 <br>
+                +1 (555) 123-4567 <br>
+                info@rapidsu.org</p>
+        </div>
+        <div class="contact-container">
+            <div class="map-section">
+                <iframe
+                    src="https://www.google.com/maps/d/u/1/embed?mid=17bLyEAwnhR5AY51CG2PznvN1cfc6rt4&ehbc=2E312F"></iframe>
+            </div>
+            <!-- Google Maps/ Form side by side -->
+            <div class="form-container">
+                <form class="form-section">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <!-- Remove this duplicate label -->
+                    <!-- <label for="message-purpose">Message Purpose:</label> -->
+
+                    <fieldset>
+                        <legend>Message Purpose:</legend>
+                        <label><input type="radio" name="message-purpose" value="general-inquiry" required> General
+                            Inquiry</label>
+                        <label><input type="radio" name="message-purpose" value="reservation-question" required>
+                            Reservation
+                            Question</label>
+                        <label><input type="radio" name="message-purpose" value="feedback" required> Website
+                            Suggestion</label>
+                    </fieldset>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <div class="checkbox-label">
+                        <input type="checkbox" id="subscribe" name="subscribe">
+                        <label for="subscribe">Please Subscribe me to the monthly
+                            Newsletter</label>
+                    </div>
+                    <button type="submit">Reach Out!</button>
+
+                </form>
+            </div>
+        </div>
+        <div class="employee-container">
+            <h2>We Are Here To Serve You</h2>
+            <div class=" employee-cards">
+                <div class="employee-card">
+                    <img src="images/rafting-gear.jpg" alt="Hanging up gear to dry">
+                    <p>Samantha: Customer Service</p>
+                </div>
+
+                <div class="employee-card">
+                    <img src="images/pexels-mia.jpg" alt="Bus driver">
+                    <p>Mia: Bus Driver</p>
+                </div>
+
+                <div class="employee-card">
+                    <img src="images/pexels-oliver-wagenblatt.jpg" alt="rafting trainer, pexels-oliver-wagenblatt">
+                    <p>Oliver: Rafting Trainer</p>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Rapids University. All rights reserved.</p>
+        <div class="socialmedia">
+            <img src="images/facebook-splash.png" alt="Facebook logo with blue paint splatter effect surrounding it">
+            <img src="images/insta.png" alt="Instagram logo with rainbow paint splatter effect surrounding it">
+            <img src="images/linkedin.png" alt="LinkedIn logo with gray paint splatter effect surrounding it">
+        </div>
+    </footer>
+
+</body>
+
+</html>
