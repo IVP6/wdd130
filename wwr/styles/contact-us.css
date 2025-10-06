@@ -54,6 +54,7 @@ body {
     width: 100%;
     height: auto;
     gap: 0;
+    margin-left: 300px;
 }
 .socialmedia {
     grid-column: 3;
@@ -61,12 +62,12 @@ body {
     gap: 1rem;
     justify-content: flex-end;
 }
-.form-section {
-    width: 600px;
+.form-section { /*adjust form section size*/
+    width: 500px;
+    margin-left: 50px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.5rem;
-    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* Form input styling */
