@@ -1,6 +1,7 @@
 :root {
     --primary-color: forestgreen;
     --secondary-color: warmsand;
+    --background-color:#0F3E4B;
     --accent1-color: riverblue;
     --accent2-color: raftyellow;
     --heading-font: 'Trebuchet MS', sans-serif;
@@ -40,8 +41,21 @@ nav ul{
     justify-content: flex-end;
     align-items: center;
     gap: 2rem;  /* Add this line for spacing between items */
+    color: whitesmoke;
+    position: relative;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
 }
 
+nav ul a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    position: relative;
+    z-index: 10;
+}
 .socialmedia a {
     height: 150px;
     text-decoration: none;
@@ -62,39 +76,50 @@ header {
     gap: 1rem;
     padding: 1rem;
 }
+header, footer {
+    margin: 0;
+    padding: 0.5rem 2rem;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
 
 header img {
-    width: 90px;
+    width: 120px;
     height: auto;
     border-radius: 50%;
 }
 /* ...existing code... */
 
 footer {
-    width: 900px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: 2rem;
-    padding: 1rem;
-    border-top: var(--heading-background) solid 2px;
+    padding: 0.5rem 2rem;
+    background-color: var(--background-color);
 }
 
 footer p {
     margin: 0;
-    text-align: center;  /* Align text to the left */
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    grid-column: 2;
 }
-footer img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-}
+
 .socialmedia {
     grid-column: 3;
     display: flex;
     gap: 1rem;
     justify-content: flex-end;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
 }
 
 .socialmedia a {
@@ -112,23 +137,375 @@ h1 {
     background-color: var(--accent1-color);
 }
 article {
-    margin-top: 120px;
-    position: relative;
-    bottom: 100px;
     background-color: var(--text-background);
     color: var(--font-color-light);
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+}
 
+.featured-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.featured-content aside {
+    background-color: var(--text-background);
+    color: var(--font-color-light);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.article-image-block {
+    float: right;
+    width: 150px;
+    height: 150px;
+    margin: 0 0 1rem 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--accent1-color);
+}
+
+.article-image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Newsletter Signup Form Styling */
+.newsletter-signup {
+    background-color: var(--text-background);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+    grid-column: 1 / -1; /* Spans across all grid columns */
+}
+
+.newsletter-signup h3 {
+    color: var(--font-color-light);
+    margin-bottom: 0.5rem;
+    background-color: var(--heading-background);
+    padding: 0.75rem;
+    border-radius: 5px;
+}
+
+.newsletter-signup p {
+    color: var(--font-color-light);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.newsletter-signup form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.newsletter-signup label {
+    color: var(--font-color-light);
+    font-weight: bold;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.newsletter-signup input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.newsletter-signup button {
+    background-color: var(--heading-background);
+    color: var(--font-color-light);
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-signup button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Trip Image Box Styling */
+.trip-image-box {
+    float: left;
+    width: 120px;
+    height: 120px;
+    margin: 0 1rem 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--accent1-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.trip-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.trip-image-box-right {
+    float: right;
+    width: 120px;
+    height: 120px;
+    margin: 0 0 1rem 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--accent1-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.trip-image-box-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Trip Article Layout */
+.trip {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: var(--text-background);
+    border-radius: 8px;
+    overflow: auto; /* Clears the float */
+}
+
+.trip h2 {
+    margin-bottom: 1rem;
+}
+
+.trip p {
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Full Width Banner Image */
+.full-width-banner {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.full-width-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.banner-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background-color: rgba(15, 62, 75, 0.8);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--heading-font);
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Page Styling */
+.company-info {
+    font-size: 19px;
+    text-align: center;
+    padding: 1rem;
+    color: var(--font-color-dark);
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: start;
+}
+
+.map-section {
+    width: 100%;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-section {
+    background-color: var(--text-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: var(--font-color-light);
+    text-align: left;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    box-sizing: border-box;
+}
+
+.form-section fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 0.75rem;
+}
+
+.form-section legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--font-color-light);
+}
+
+.form-section fieldset label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.form-section input[type="radio"] {
+    width: auto;
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+}
+
+.form-section input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.checkbox-label label {
+    margin-bottom: 0;
+    color: var(--font-color-light);
+}
+
+.form-section button {
+    background-color: var(--heading-background);
+    color: var(--font-color-light);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.form-section button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Employee Container */
+.employee-container {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: var(--text-background);
+    border-radius: 8px;
+}
+
+.employee-container h2 {
+    text-align: center;
+    color: var(--font-color-light);
+    margin-bottom: 2rem;
+}
+
+.employee-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.employee-card {
+    text-align: center;
+    color: var(--font-color-light);
+}
+
+.employee-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.employee-card p {
+    margin: 0;
+    font-weight: bold;
 }
 .hero article img {
     float: right;
     width: 200px;
     height: auto;
 }
-.adventure-grid {
+.content-wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
     margin: 2rem 0;
+    align-items: start;
+}
+
+.adventure-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    flex-wrap: nowrap;
 }
 
 .adventure-grid figure {
@@ -150,67 +527,91 @@ article {
     font-weight: bold;
     color: var(--font-color-dark);
 }
-/*NEWS LETTER SIGN UP*/
-.newsletter-signup {
-    max-width: 350px;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.476);
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    overflow: hidden;
+}
+
+.image-text {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: var(--font-color-light);
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin: 0;
+}
+
+/* Newsletter Form Styling */
+.newsletter-form {
+    background-color: var(--text-background);
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    height: fit-content;
-}
-
-.newsletter-signup h3 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-    font-size: 1.3rem;
     text-align: center;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
 }
 
-.newsletter-signup p {
+.newsletter-form h3 {
+    color: var(--font-color-light);
+    margin-bottom: 1rem;
+    background-color: var(--heading-background);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.newsletter-form p {
+    color: var(--font-color-light);
     margin-bottom: 1.5rem;
-    color: #333;
-    font-size: 0.9rem;
-    line-height: 1.4;
-
 }
-.newsletter-signup form {
+
+.newsletter-form form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.newsletter-signup .form-group {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
 
-.newsletter-signup label {
-    color: #333;
+.newsletter-form label {
+    color: var(--font-color-light);
     font-weight: bold;
-    min-width: 80px;  /* Fixed width for labels */
     text-align: left;
 }
 
-.newsletter-signup input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-.newsletter-signup button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 9px 20px;
+.newsletter-form input {
+    padding: 10px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 0.5rem;
+    font-size: 16px;
 }
 
-.newsletter-signup button:hover {
-    background-color: var(--text-background);
+.newsletter-form button {
+    background-color: var(--heading-background);
+    color: var(--font-color-light);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--primary-color);
 }
